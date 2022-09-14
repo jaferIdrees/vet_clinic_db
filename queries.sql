@@ -71,4 +71,4 @@ GROUP BY neutered;
 /* What is the average number of escape attempts per animal type of those born between 1990 and 2000? */
 SELECT neutered, AVG(escape_attempts) FROM animals
 WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31'
-vet_clinic-# GROUP BY neutered;
+GROUP BY neutered;
