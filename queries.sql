@@ -116,4 +116,4 @@ FROM animals A
 JOIN owners O ON A.owner_id = O.id
 GROUP BY O.full_name
 ORDER BY count DESC
-vet_clinic-# LIMIT 1;
+LIMIT 1;
