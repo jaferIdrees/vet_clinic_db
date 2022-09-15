@@ -47,3 +47,27 @@ ALTER TABLE animals
 ADD CONSTRAINT owner_id 
 FOREIGN KEY (owner_id) 
 REFERENCES owners (id);
+
+/* forth session - Add join table for Visits */
+/* Create a table named vets */
+CREATE TABLE vets (
+    name varchar(100),
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    age int,
+    date_of_graduation date
+);
+
+/* Create a "join table" called specializations */
+CREATE TABLE specializations (
+    species_id INT,
+    vet_id INT,
+    PRIMARY KEY (species_id,vet_id)
+);
+
+/* Create a "join table" called visits */
+CREATE TABLE visits (
+    animal_id INT,
+    vet_id INT,
+    date date,
+    PRIMARY KEY (animal_id,vet_id, date)
+);
