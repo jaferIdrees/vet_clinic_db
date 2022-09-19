@@ -87,10 +87,12 @@ CREATE TABLE visits(
   PRIMARY KEY(id)
 );
 
+
 /* Optimize"SELECT COUNT(*) FROM visits where animal_id = 4;"query */
 CREATE INDEX animal_id_asc ON visits(animal_id ASC);
 
-/* Optimize"SELECT * FROM visits where vet_id = 2;"query */
+
+/* Optimize "SELECT * FROM visits where vet_id = 2;" query */
 CREATE INDEX vet_id_asc ON visits(vet_id ASC);
 
 /* Optimize"SELECT * FROM owners where email = 'owner_18327@mail.com';"query */
