@@ -71,3 +71,27 @@ CREATE TABLE visits (
     date date,
     PRIMARY KEY (animal_id,vet_id, date)
 );
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+ALTER TABLE visits RENAME COLUMN date TO date_of_visit;
+
+DROP TABLE visits;
+
+CREATE TABLE visits(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  animal_id INT REFERENCES animals(id),
+  vet_id INT REFERENCES vets(id),
+  date_of_visit DATE,
+  PRIMARY KEY(id)
+);
+
+/* Optimize"SELECT COUNT(*) FROM visits where animal_id = 4;"query */
+CREATE INDEX animal_id_asc ON visits(animal_id ASC);
+
+/* Optimize"SELECT * FROM visits where vet_id = 2;"query */
+CREATE INDEX vet_id_asc ON visits(vet_id ASC);
+
+/* Optimize"SELECT * FROM owners where email = 'owner_18327@mail.com';"query */
+CREATE INDEX email_asc ON owners(email ASC);
