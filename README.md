@@ -21,6 +21,13 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@twitterhandle](https://twitter.com/jafel_l)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/jafer-idrees/)
 
+
+👤 **Ntihinduka Alpha**
+
+- GitHub: [@githubhandle](https://github.com/AlphaNtihinduka)
+- Twitter: [@twitterhandle](https://twitter.com/@alphantihinduka)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ntihinduka-alpha-81bb7b22a/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
